@@ -5,18 +5,18 @@ date:   2016-11-30 10:19:48 +0100
 lang: es
 categories: pmp
 ---
-Last studies show us that the software's average lifetime is around 10 years. Does it mean that software is like a engine of an old car? Is there a time when you cannot fix it more and the best option is to buy a new one?
+Last studies show us that the software's average lifetime is around 10 years. Does it mean that software is like the engine of an old car? Is there a time when you cannot fix it any more and the best option is to buy a new one?
 Well, there are many influential factors but this entry is about the **technical debt** and how you can manage it as a Project Manager.
 
 {% include toc %}
 
-Let's assume that you are a PM in a long time project (4 or 5 years) and obviously, you will need a initial investment and some financing during the project. Investors will ask whether that project is a good investment, what and when will be the ROI. I mean, they could need to know the project's **NVP** and **IRR**.
+Let's assume that you are a PM in a long time project (4 or 5 years) and obviously, you will need an initial investment and some financing during the project. Investors will ask whether that project is a good investment, what and when will be the ROI. I mean, they could need to know the project's **NVP** and **IRR**.
 
 In software development world, we usually _estimate the cost of each new feature_, trying to know what will be the cost associated. However, do we actually implement what we estimated before?. No, we don't. Normally new issues arise, the complexity is increased or requirements do not match what the clients needed.
 
 > This entry introduces an indicator to evaluate software refactoring process and **it could be extremely useful when you have to explain to your stakeholders** the cost of avoiding a refactoring. During the planning, those indicators will **help you to prioritize each refactoring** process to get the best performance.
 
-Let's come back to our financial example: each **un-planned** change in the project is like a *request for funding*. It means that we do not have enough cash and we need to use external financial services. As you know, this loan is not free. Any administrator would think to request a loan if the interest rate is unknown. If someone did that, we could think that he/she is incompetent. Well, this situation occurs everyday in software development.
+Let's come back to our financial example: each **un-planned** change in the project is like a *request for funding*. It means that we do not have enough cash and we need to use external financial services. As you know, this loan is not for free. No administrator would ever think of requesting a loan if the interest rate is unknown. If someone did that, we would think that he/she is incompetent. Well, this situation occurs everyday in software development.
 
 <script src="http://fred-wang.github.io/mathml.css/mspace.js">
 </script>
@@ -103,7 +103,7 @@ First of all, don't worry about the following formulas because your SpreadSheet 
 Where:
 
 <ul>
- <li><strong>C<sub>t</sub></strong> is the _net cash flow_, i.e. inflow - outflow, at time <em>t</em>.</li>
+ <li><strong>C<sub>t</sub></strong> is the <em>net cash flow</em>, i.e. inflow minus outflow, at time <em>t</em>.</li>
  <li><strong>C<sub>0</sub></strong> is the net cash flow at the beginning. It means the <em>initial investment</em>.</li>
  <li><strong>i</strong> is the <em>discount rate</em>. We could use a fixed rate investment or any other similar risk rate investment.</li>
 </ul>
@@ -253,7 +253,7 @@ IRR_{n+1} = IRR_{ n } - NVP_n cdot ( {IRR_n - IRR_{n-1} } over {NVP_n - NVP_{n-1
 </math>
 <!--embed data="../_includes/mml/irr_financial_formula.mml" type="text/xml"/-->
 
-However _we need to transform each financial concept to our **technical debt** templates_( see **Technical Debt Calculation** section).
+However _we need to transform each financial concept to our **technical debt** templates_ (see **Technical Debt Calculation** section).
 
 Using **NVP**, we could evaluate the viability and profitability of a project overtime. Let's see the example below to clarify both concepts.
 
@@ -323,7 +323,7 @@ This matrix allows us to prioritise the payment of our technical debt along deve
 </table>
 
 
-Template to manage refactors
+Template to manage refactors:
 
 <table>
     <tr>
@@ -376,7 +376,7 @@ Template to manage refactors
 
 We only need a little modification in NVP formula to apply to our **technical debt** calculation:
 1. Instead of using years or any period time (t), we will use the released feature.
-2. The **cash flow** _is the difference between the cost of doing nothing and the cost of applying the refactor_.
+2. The **cash flow** is _the difference between the cost of doing nothing and the cost of applying the refactor_.
 
 Let's start an example. We have to develop and deploy three new features in our product/project. Team has identified two possible refactors, and modules are affected by each of those refactors. Next step is to generate the feature associated estimations, using different scenarios (no refactor, refactor A and refactor B). The following table represents those estimations:
 
@@ -495,16 +495,16 @@ In this business, from time to time, new hypes are coming up and they become the
 
 > Your R&D team could investigate and test those new *hypes*, but you should be careful to limit the investment (time, resources and money).
 
-Some of those last hypes are:
+Some of those latest hypes are:
  - **Agile**, please read [Agile dead](https://www.linkedin.com/pulse/agile-dead-matthew-kern) or read about hybrid agile (agile + waterfall).
  - Or **Big Data** where just the [27% of executives describe their Big Data initiatives as  successful](https://www.capgemini-consulting.com/resource-file-access/resource/pdf/cracking_the_data_conundrum-big_data_pov_13-1-15_v2.pdf).
 
 The big advantage of those hypes is that projects hardly have any **technical debt and they could still be high efficient projects**. Nevertheless, over time the weight of **technical debt** increases. I have faced projects where the cost of a new development from scratch was cheaper than fixing the current one.
 
 # Conclusion #
-I have been fortunate to work in long-life projects (more than 10 years when I arrived to the team) and they had a huge **technical debt** fed over the years. The big issue is that **technical debt** is hidden to management layers until it has threatening level.
-In this sense, it is impossible to get high performance team (Agile team) when they are spending more that 40% of the development time fighting against the **technical debt**. How do you tell your stakeholders that the final product is 40% more expensive or the team velocity is just 60%? And this is the best case because next year will be likely worse. Those things end up with team's motivation, increase the **time to market**, and you could loose competency or whole business.
+I have been fortunate to work in long-life projects (more than 10 years when I arrived to the team) and they had a huge **technical debt** fed over the years. The big issue was that **technical debt** was hidden to management layers until it reached a threatening level.
+In this sense, it is impossible to get a high performance team (Agile team) when they are spending more that 40% of the development time fighting against the **technical debt**. How do you tell your stakeholders that the final product is 40% more expensive or the team velocity is just 60%? And this is the best case because next year it will be likely worse. Those things end up with team's motivation, increase the **time to market**, and you could loose competency or the whole business.
 
 > Keep risks under control, keep your **technical debt** under control
 
-You could think that the cost of evaluate the **technical debt** on a long-life project is high but let's see from the financial point of view: Does someone dare to buy a house without checking if it is free of charge?
+You could think that the cost of evaluating the **technical debt** on a long-lived project is high but let's see it from a financial point of view: Does someone dare to buy a house without checking if it is free of a mortgage?
